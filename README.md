@@ -34,11 +34,12 @@ flowchart TB
 
 | Service | Purpose |
 |---|---|
-| Nextcloud + MariaDB | Private cloud storage; admin account + separate member accounts |
+| Nextcloud + MariaDB | Private cloud storage; admin account + separate member account for my partner |
 | Jellyfin | Media streaming, backed by a dedicated ext4 drive at `/mnt/media` |
-| Pi-hole | Network-wide DNS ad-blocking (10.0.0.50) |
+| Pi-hole | Network-wide DNS ad-blocking and local DNS resolution (10.0.0.50) |
 | Watchtower | Automatic container updates |
 | Tailscale | Zero-config VPN mesh for remote access (100.124.116.118) — no ports exposed to the public internet |
+| Sunshine + Moonlight | Remote game streaming from the server to other devices on the network/VPN |
 
 ## Key architecture decisions
 
@@ -63,6 +64,15 @@ See [`docs/`](./docs) for full writeups:
 - [DVD ripping pipeline](./docs/dvd-ripping-pipeline.md) — MakeMKV + HandBrake, H.265 MKV output, Jellyfin naming conventions
 - [Trickplay permissions fix](./docs/trickplay-permissions-fix.md) — resolving a root-owned file issue in Jellyfin's trickplay generation
 - [Nextcloud trusted domain fix](./docs/nextcloud-trusted-domain.md) — resolving a trusted domain misconfiguration
+- [Pi-hole local DNS setup](./docs/pihole-local-dns.md) — configuring Pi-hole for local DNS resolution alongside ad-blocking
+
+## Ongoing work
+
+The media library is actively growing — DVDs and CDs are being ripped and added on a rolling basis using the pipeline documented above.
+
+## Roadmap
+
+Planned improvements are tracked as [GitHub Issues](../../issues) — includes moving the Docker stack to version-controlled `docker-compose.yml`, an Ansible playbook for provisioning, and a monitoring stack.
 
 ## Changelog
 
