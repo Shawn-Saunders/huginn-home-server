@@ -72,7 +72,7 @@ The media library is actively growing — DVDs and CDs are being ripped and adde
 
 ## Roadmap
 
-Planned improvements are tracked as [GitHub Issues](../../issues) — includes moving the Docker stack to version-controlled `docker-compose.yml`, an Ansible playbook for provisioning, and a monitoring stack.
+Work is tracked on the [Project board](../../projects) — currently three milestones: Infrastructure as Code, Observability & Reliability, and Documentation Catch-up. See [Issues](../../issues) for the full backlog.
 
 ## Changelog
 
