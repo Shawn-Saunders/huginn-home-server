@@ -39,7 +39,7 @@ flowchart TB
 | Pi-hole | Network-wide DNS ad-blocking and local DNS resolution (10.0.0.50) |
 | Watchtower | Automatic container updates |
 | Tailscale | Zero-config VPN mesh for remote access (100.124.116.118) — no ports exposed to the public internet |
-| Sunshine + Moonlight | Remote game streaming from the server to other devices on the network/VPN |
+| Sunshine (PC) + Moonlight (server) | Game streaming from my gaming PC to the living room via the server as a thin client |
 
 ## Key architecture decisions
 
